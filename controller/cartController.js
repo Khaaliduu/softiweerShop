@@ -68,14 +68,14 @@ export const addToWishlist  = async(req, res) => {
                res.status(400).json({message:"aleardy added"})
 
             }else{
-                user.wishlist.push({product, quantity:1})
+                user.wishlist.push({product})
             }
         }
 
         
         
 
-        user = user.save()
+        user = await user.save()
         res.status(200).json(user)
 
 

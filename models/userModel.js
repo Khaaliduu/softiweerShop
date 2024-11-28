@@ -27,7 +27,8 @@ const userShema = mongoose.Schema({
         {
             product:{
                 type:mongoose.Schema.Types.ObjectId,
-                required:true
+                required:true,
+                ref: 'products'
             },
             quantity:{
                 type: Number ,
@@ -39,7 +40,9 @@ const userShema = mongoose.Schema({
         {
             product:{
                 type:mongoose.Schema.Types.ObjectId,
-                required:true
+                required:true,
+                
+                ref: 'products'
             },
 
         }
