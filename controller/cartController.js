@@ -34,7 +34,7 @@ export const addToCart  = async(req, res) => {
         
         
 
-        user = user.save()
+        user =await user.save()
         res.status(200).json(user)
 
 
