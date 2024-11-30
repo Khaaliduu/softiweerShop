@@ -3,7 +3,7 @@ import { addToCart, addToWishlist } from '../controller/cartController.js';
 
 const router = express.Router()
 
-router.route('/').patch(addToCart)
+router.route('/').post(addToCart)
 router.route('/add-to-wishlist').post(addToWishlist)
 
 
