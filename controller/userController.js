@@ -11,7 +11,7 @@ export const getUsers = async (req, res) => {
 
 export const getUserById = async (req, res) => {
   try {
-    const user = await Users.findById(req.params.id);
+    const user = await Users.findById(req.params.id).populate("cart.product").populate("wishlist.product");
     res.status(200).json(user);
   } catch (e) {
     res.status(500).json({ error: e.message });
